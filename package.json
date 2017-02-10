@@ -1,0 +1,35 @@
+{
+  "name": "awaitability",
+  "version": "0.0.1",
+  "author": "Alexey Zabrodsky <elmigranto@gmail.com>",
+  "license": "MIT",
+  "description": "Utilities for composing async/await functions.",
+  "keywords": [],
+  "main": "index.js",
+  "homepage": "https://github.com/elmigranto/awaitability",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elmigranto/awaitability.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elmigranto/awaitability/issues"
+  },
+  "engines": {
+    "node": ">=7",
+    "npm": ">=4"
+  },
+  "scripts": {
+    "test": "mocha --harmony --bail --no-exit --throw-deprecation ./tests/helper.js './tests/**/*.test.js'",
+    "testw": "nodemon --watch src/ --watch tests/ --exec 'npm run test'",
+    "lint": "eslint index.js src/ tests/ examples/",
+    "lintw": "nodemon --watch index.js --watch src/ --watch tests/ --exec 'npm run lint'",
+    "prepublish": "npm run lint && npm run test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
